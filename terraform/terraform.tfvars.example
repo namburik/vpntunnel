@@ -1,0 +1,8 @@
+# Copy to terraform.tfvars and fill in. Never commit the real file.
+
+compartment_id = "ocid1.tenancy.oc1..aaaaaaaaxxxxxxxxxxxxxxxxxxxxxxxx" # your tenancy OCID works for a personal account
+ssh_public_key = "ssh-ed25519 AAAA... you@yourmac"
+admin_cidr     = "203.0.113.5/32" # YOUR current public IP + /32 — find it with: curl -s ifconfig.co
+
+# region          = "ap-mumbai-1"   # or "ap-hyderabad-1"
+# instance_shape  = "VM.Standard.A1.Flex"   # fallback: "VM.Standard.E2.1.Micro" if you hit "Out of host capacity"

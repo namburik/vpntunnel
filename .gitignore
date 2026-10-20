@@ -1,0 +1,12 @@
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+terraform/*.tfplan
+terraform/tfplan
+
+server/clients/
+client/**/*.conf
+client/**/*.png
+*.key
+*.pem

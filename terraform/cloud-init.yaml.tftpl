@@ -1,0 +1,14 @@
+#cloud-config
+write_files:
+  - path: /root/setup-wireguard.sh
+    permissions: '0700'
+    content: |
+      ${indent(6, setup_script)}
+
+  - path: /root/add-client.sh
+    permissions: '0700'
+    content: |
+      ${indent(6, add_client_script)}
+
+runcmd:
+  - [ bash, -c, "WG_PORT=${wg_port} /root/setup-wireguard.sh" ]
